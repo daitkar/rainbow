@@ -1,0 +1,41 @@
+{
+  "name": "rainbow",
+  "version": "1.0.0",
+  "description": "rainbow for rainforest",
+  "private": true,
+  "tags": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-globals": "npm install --global cross-env http-server",
+    "build": "webpack -d --progress",
+    "build-u": "cross-env UNMINIFIED=true webpack -d --progress",
+    "watch": "webpack -d --watch --progress",
+    "watch-u": "cross-env UNMINIFIED=true webpack --watch --progress",
+    "release": "cross-env MODE=release webpack -d --progress",
+    "ci": "cross-env NAMES=release* MODE='test,release' webpack"
+  },
+  "keywords": [
+    "rainbow"
+  ],
+  "author": "shailesh daitkar",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "angular-animate": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-bootstrap": "^2.1.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "bootstrap-css": "^3.0.0",
+    "core-js": "^2.4.1",
+    "lodash": "^4.14.1",
+    "ui-select": "^0.19.4",
+    "webpack-angularity-solution": "^1.6.1"
+  }
+}
